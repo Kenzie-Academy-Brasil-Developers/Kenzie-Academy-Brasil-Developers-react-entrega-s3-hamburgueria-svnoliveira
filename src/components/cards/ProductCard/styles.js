@@ -1,10 +1,22 @@
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 import { alignJustifyCenter } from "../../../globalStyles/GlobalStyle";
 
 export const StyledProductCard = styled.li`
+
+    ${({color}) => {
+        if (color === "grey"){
+            return css`
+            border: solid 0.2rem var(--color-grey-100);
+            `
+        } else if (color === "green"){
+            return css`
+            border: solid 0.2rem var(--color-primary);
+            `
+        }
+    }}
+
     min-width: 30rem;
     min-height: 34.6rem;
-    border: solid 0.2rem var(--color-grey-100);
     border-radius: 0.5rem;
     
     > picture {

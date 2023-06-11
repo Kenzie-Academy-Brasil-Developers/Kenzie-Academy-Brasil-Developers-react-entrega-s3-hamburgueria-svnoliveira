@@ -4,7 +4,7 @@ import { FontCaption } from "../../../globalStyles/typography/FontCaption/styles
 import { FontBody600 } from "../../../globalStyles/typography/FontBody600/styles.js"
 import { StyledProductCard } from "./styles"
 
-export const ProductCard = ({product, setCartList, cartList}) => {
+export const ProductCard = ({product, setCartList, cartList, isSelected, setIsSelected}) => {
 
     const productPrice = product.price.toLocaleString('pt-BR', {currency: 'BRL', style: 'currency'})
 
@@ -43,9 +43,13 @@ export const ProductCard = ({product, setCartList, cartList}) => {
     //         return product.counter
     //     }
     // }
-    
+
+    const handleSelection = (clickedCardId) => {
+        setIsSelected(clickedCardId)
+    }
+
     return (
-        <StyledProductCard>
+        <StyledProductCard  color={product.id === isSelected ? "green" : "grey"} onMouseDown={() => {handleSelection(product.id)}}>
             <picture>
                 <img src={product.img} alt="product" />
             </picture>
@@ -54,7 +58,7 @@ export const ProductCard = ({product, setCartList, cartList}) => {
                 <FontCaption>{product.category}</FontCaption>
                 <FontBody600>{productPrice}</FontBody600>
             </div>
-            <StyledButton mode="medium" color="grey" onClick={addProduct}>Adicionar</StyledButton>
+            <StyledButton mode="medium" color={product.id === isSelected ? "green" : "grey"} onClick={addProduct}>Adicionar</StyledButton>
         </StyledProductCard>
     )
 }

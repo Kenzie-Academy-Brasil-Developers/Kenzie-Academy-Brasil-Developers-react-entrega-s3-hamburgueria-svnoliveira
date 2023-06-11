@@ -32,5 +32,6 @@ export const StyledCartCard = styled.li`
         fill: var(--color-grey-100);
         width: 2.4rem;
         height: 2.4rem;
+        cursor: pointer;
     }
 `
