@@ -1,3 +1,9 @@
+import { StyledButton } from "../../../globalStyles/buttons/styles"
+import { FontHeading2 } from "../../../globalStyles/typography/FontHeading2/styles.js"
+import { FontCaption } from "../../../globalStyles/typography/FontCaption/styles.js"
+import { FontBody600 } from "../../../globalStyles/typography/FontBody600/styles.js"
+import { StyledProductCard } from "./styles"
+
 export const ProductCard = ({product, setCartList, cartList}) => {
 
     const productPrice = product.price.toLocaleString('pt-BR', {currency: 'BRL', style: 'currency'})
@@ -39,14 +45,16 @@ export const ProductCard = ({product, setCartList, cartList}) => {
     // }
     
     return (
-        <li>
-            <img src={product.img} alt="product" />
-            <div className="text-container">
-                <h2>{product.name}</h2>
-                <span>{product.category}</span>
-                <p>{productPrice}</p>
-                </div>
-            <button onClick={addProduct}>Adicionar</button>
-        </li>
+        <StyledProductCard>
+            <picture>
+                <img src={product.img} alt="product" />
+            </picture>
+            <div>
+                <FontHeading2>{product.name}</FontHeading2>
+                <FontCaption>{product.category}</FontCaption>
+                <FontBody600>{productPrice}</FontBody600>
+            </div>
+            <StyledButton mode="medium" color="grey" onClick={addProduct}>Adicionar</StyledButton>
+        </StyledProductCard>
     )
 }

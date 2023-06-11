@@ -1,4 +1,8 @@
 import { FaTrash } from "react-icons/fa"
+import { StyledCartCard } from "./styles"
+import { FontHeading3 } from "../../../globalStyles/typography/FontHeading3/styles"
+import { StyledButton } from "../../../globalStyles/buttons/styles"
+
 export const CartCard = ({ product, setCartList, cartList}) => {
 
     const removeProduct = () => {
@@ -20,13 +24,13 @@ export const CartCard = ({ product, setCartList, cartList}) => {
     }
 
     return (
-        <li>
+        <StyledCartCard>
             <img src={product.img} alt="product image" />
             <div className="text-container">
-                <span>{product.name}</span>
-                <div>{product.counter}</div>
-                <FaTrash onClick={removeProduct}/>
+                <FontHeading3>{product.name}</FontHeading3>
+                <StyledButton>{product.counter}</StyledButton>
+                <FaTrash onClick={removeProduct} />
             </div>
-        </li>
+        </StyledCartCard>
     )
 }

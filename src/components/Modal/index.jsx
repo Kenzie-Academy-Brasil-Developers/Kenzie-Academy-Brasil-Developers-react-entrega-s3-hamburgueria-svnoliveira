@@ -1,5 +1,9 @@
 import { useEffect, useRef } from "react"
 import { CartCard } from "../cards/CartCard"
+import { StyledModal } from "./styles"
+import { FontHeading3 } from "../../globalStyles/typography/FontHeading3/styles.js"
+import { FontBody600 } from "../../globalStyles/typography/FontBody600/styles"
+import { StyledButton } from "../../globalStyles/buttons/styles"
 
 export const Modal = ({ cartList, setCartList, setIsModal }) => {
 
@@ -21,8 +25,6 @@ export const Modal = ({ cartList, setCartList, setIsModal }) => {
         }
     },[])
 
-    
-
     useEffect(()=> {
         const handleClickClose = (event) => {
             if (event.key === "Escape") {
@@ -38,10 +40,10 @@ export const Modal = ({ cartList, setCartList, setIsModal }) => {
     return (
         <>
     
-        <section role="dialog">
-            <div className="modal-container" ref={modalRef}>
+        <StyledModal role="dialog">
+            <div ref={modalRef}>
                 <div id="modal-header">
-                    <h2>Carrinho de compras</h2>
+                    <FontHeading3>Carrinho de compras</FontHeading3>
                     <button onClick={() => setIsModal(false)}>X</button>
                 </div>
                 <ul>
@@ -51,13 +53,13 @@ export const Modal = ({ cartList, setCartList, setIsModal }) => {
                         )
                     }))}
                 </ul>
-                <div className="price-container">
-                    <span>Total</span>
-                    <span>{cartTotal}</span>
+                <div id="price-container">
+                    <FontBody600 color="black">Total</FontBody600>
+                    <FontBody600>{cartTotal}</FontBody600>
                 </div>
-                <button onClick={() => setCartList(cartList.filter(product => product.id < 0))}>Remover Todos</button>
+                <StyledButton mode="default" color="grey" onClick={() => setCartList(cartList.filter(product => product.id < 0))}>Remover Todos</StyledButton>
             </div>
-        </section>
+        </StyledModal>
         </>
     )
 }
