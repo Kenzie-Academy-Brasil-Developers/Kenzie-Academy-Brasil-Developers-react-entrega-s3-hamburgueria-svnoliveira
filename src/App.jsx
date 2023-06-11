@@ -1,5 +1,5 @@
-import { GlobalStyle } from "./globalStyles/GlobalStyle"
-import { Reset } from "./globalStyles/reset"
+import { GlobalStyle } from "./globalStyles/GlobalStyle.js"
+import { Reset } from "./globalStyles/Reset.js"
 import { Feed } from "./pages/feed"
 
 export const App = () => {  
