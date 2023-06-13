@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { Header } from "../../components/Header/"
-import { Modal } from "../../components/Modal/"
-import { ProductList } from "../../components/ProductList/"
-import { api } from "../../services/api.js"
+import { Header } from "../../components/Header"
+import { Modal } from "../../components/Modal"
+import { ProductList } from "../../components/ProductList"
+import { api } from "../../Services/api.js"
 
 
 export const Feed = () => {  

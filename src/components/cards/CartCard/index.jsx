@@ -1,7 +1,7 @@
 import { FaTrash } from "react-icons/fa"
 import { StyledCartCard } from "./styles"
-import { FontHeading3 } from "../../../globalStyles/typography/FontHeading3/styles"
-import { StyledButton } from "../../../globalStyles/buttons/styles"
+import { FontHeading3 } from "../../../globalStyles/Typography/FontHeading3/styles"
+import { StyledButton } from "../../../globalStyles/Buttons/styles"
 
 export const CartCard = ({ product, setCartList, cartList}) => {
 

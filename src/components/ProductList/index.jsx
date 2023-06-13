@@ -1,5 +1,5 @@
-import { useRef, useState } from "react"
-import { ProductCard } from "../cards/ProductCard"
+import { useState } from "react"
+import { ProductCard } from "../Cards/ProductCard"
 import { CardList } from "./styles"
 
 export const ProductList = ({filteredList, setCartList, cartList}) => {

@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react"
-import { CartCard } from "../cards/CartCard"
+import { CartCard } from "../Cards/CartCard"
 import { StyledModal } from "./styles"
-import { FontHeading3 } from "../../globalStyles/typography/FontHeading3/styles.js"
-import { FontBody600 } from "../../globalStyles/typography/FontBody600/styles"
-import { StyledButton } from "../../globalStyles/buttons/styles"
+import { FontHeading3 } from "../../globalStyles/Typography/FontHeading3/styles.js"
+import { FontBody600 } from "../../globalStyles/Typography/FontBody600/styles"
+import { StyledButton } from "../../globalStyles/Buttons/styles"
 
 export const Modal = ({ cartList, setCartList, setIsModal }) => {
 

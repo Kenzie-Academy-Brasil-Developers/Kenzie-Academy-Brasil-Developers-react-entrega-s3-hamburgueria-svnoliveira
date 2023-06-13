@@ -2,7 +2,7 @@
 import logo from "../../assets/logo.png"
 import { FaShoppingCart, FaSearch } from "react-icons/fa"
 import { StyledHeader } from "./styles"
-import { StyledButton, StyledInput } from "../../globalStyles/buttons/styles"
+import { StyledButton, StyledInput } from "../../globalStyles/Buttons/styles"
 
 export const Header = ({setSearchTerm, setIsModal, cartList}) => {
     

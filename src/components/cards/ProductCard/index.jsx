@@ -1,7 +1,7 @@
-import { StyledButton } from "../../../globalStyles/buttons/styles"
-import { FontHeading2 } from "../../../globalStyles/typography/FontHeading2/styles.js"
-import { FontCaption } from "../../../globalStyles/typography/FontCaption/styles.js"
-import { FontBody600 } from "../../../globalStyles/typography/FontBody600/styles.js"
+import { StyledButton } from "../../../globalStyles/Buttons/styles"
+import { FontHeading2 } from "../../../globalStyles/Typography/FontHeading2/styles.js"
+import { FontCaption } from "../../../globalStyles/Typography/FontCaption/styles.js"
+import { FontBody600 } from "../../../globalStyles/Typography/FontBody600/styles.js"
 import { StyledProductCard } from "./styles"
 
 export const ProductCard = ({product, setCartList, cartList, isSelected, setIsSelected}) => {
@@ -34,15 +34,6 @@ export const ProductCard = ({product, setCartList, cartList, isSelected, setIsSe
         }
 
     }
-
-    // const startItemCounter = () => {
-    //     if(!product.counter){
-    //         updateCartList(1)
-    //         return product.counter
-    //     } else {
-    //         return product.counter
-    //     }
-    // }
 
     const handleSelection = (clickedCardId) => {
         setIsSelected(clickedCardId)
